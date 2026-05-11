@@ -20,7 +20,6 @@ This project implements a simple bytecode virtual machine for a subset of the Lo
 - Print statements
 - `.lox` file input
 
-## Build
+## AI / Tool Attribution
 
-```bash
-make
+ChatGPT was used to assist with project planning, debugging, VM organization, and implementation guidance.
