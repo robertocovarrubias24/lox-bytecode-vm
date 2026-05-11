@@ -92,6 +92,18 @@ void Compiler::emitConstant(double value) {
 
 void Compiler::expression() {
     term();
+
+    while (match(TOKEN_GREATER) || match(TOKEN_LESS)) {
+        TokenType operatorType = previous.type;
+
+        term();
+
+        if (operatorType == TOKEN_GREATER) {
+            emitByte(OP_GREATER);
+        } else {
+            emitByte(OP_LESS);
+        }
+    }
 }
 
 void Compiler::term() {

@@ -115,7 +115,12 @@ Token Scanner::scanToken() {
             return makeToken(TOKEN_SLASH);
         case ';':
             return makeToken(TOKEN_SEMICOLON);
-    }
+        case '>':
+            return makeToken(TOKEN_GREATER);
+
+        case '<':
+            return makeToken(TOKEN_LESS);
+        }
 
     return errorToken("Unexpected character.");
 }
